@@ -10,6 +10,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;700&family=PT+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Bolzapp</title>
   </head>
@@ -44,7 +50,43 @@
             placeholder="Cerca o inserici nuova chat"
           />
         </div>
+
         <div class="chat-avviate">
+          <div class="profilo-chat">
+            <img class="propic" src="img/avatar_1.jpg" alt="" />
+            <div class="info-user">
+              <div class="nome">Michele</div>
+              <div class="ultimo-mess">Ultimo messaggio inviato</div>
+            </div>
+          </div>
+          <div class="profilo-chat">
+            <img class="propic" src="img/avatar_1.jpg" alt="" />
+            <div class="info-user">
+              <div class="nome">Michele</div>
+              <div class="ultimo-mess">Ultimo messaggio inviato</div>
+            </div>
+          </div>
+          <div class="profilo-chat">
+            <img class="propic" src="img/avatar_1.jpg" alt="" />
+            <div class="info-user">
+              <div class="nome">Michele</div>
+              <div class="ultimo-mess">Ultimo messaggio inviato</div>
+            </div>
+          </div>
+          <div class="profilo-chat">
+            <img class="propic" src="img/avatar_1.jpg" alt="" />
+            <div class="info-user">
+              <div class="nome">Michele</div>
+              <div class="ultimo-mess">Ultimo messaggio inviato</div>
+            </div>
+          </div>
+          <div class="profilo-chat">
+            <img class="propic" src="img/avatar_1.jpg" alt="" />
+            <div class="info-user">
+              <div class="nome">Michele</div>
+              <div class="ultimo-mess">Ultimo messaggio inviato</div>
+            </div>
+          </div>
           <div class="profilo-chat">
             <img class="propic" src="img/avatar_1.jpg" alt="" />
             <div class="info-user">
@@ -83,10 +125,38 @@
         </div>
       </div>
       <div class="container-chat">
-        <div class="chat"></div>
+        <div class="chat">
+          <div class="chat-aperta">
+            <div class="profilo-chat">
+              <img class="pic" src="img/avatar_1.jpg" alt="" />
+              <div class="info-user">
+                <div class="nome">Michele</div>
+                <div class="ultimo-mess">Ultimo messaggio inviato</div>
+              </div>
+              <div class="icone icone-destra">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-paperclip"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+            <div class="messaggi">
+              <div class="messaggio-mio"></div>
+              <div class="messaggio-altro"></div>
+            </div>
+            <div class="send-message">
+              <i class="fa-regular fa-face-smile ic"></i>
+              <input
+                type="text"
+                class="new-text"
+                placeholder="Scrivi un messaggio"
+              />
+              <i class="fa-solid fa-microphone icone"></i>
+            </div>
+          </div>
+        </div>
       </div>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script src="script.js"></script>
     </div>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>
