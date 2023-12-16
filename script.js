@@ -3,6 +3,9 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      activeContact: 0,
+      myMessage: [],
+      yourMessage: [],
       contacts: [
         {
           name: "Michele",
@@ -167,5 +170,10 @@ createApp({
         },
       ],
     };
+  },
+  methods: {
+    contactNu(index) {
+      this.activeContact = index;
+    },
   },
 }).mount("#app");

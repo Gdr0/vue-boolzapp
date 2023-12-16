@@ -131,6 +131,11 @@ a {
   align-items: flex-start;
   border-top: solid lightgrey 1px;
 }
+.prof-chat {
+  display: flex;
+  align-items: flex-start;
+  border-top: solid lightgrey 1px;
+}
 .info-chat {
   width: 50%;
 }

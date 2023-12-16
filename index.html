@@ -55,8 +55,9 @@
           <div class="chat-avviate">
             <div
               class="profilo-chat"
-              v-for="(contact,index) in contacts"
+              v-for="(contact, index) in contacts"
               :key="index"
+              @click="contactNu(index)"
             >
               <img class="propic" :src="contact.avatar" alt="" />
               <div class="info-user">
@@ -70,9 +71,9 @@
           <div class="chat">
             <div class="chat-aperta">
               <div class="profilo-chat">
-                <img class="pic" src="img/avatar_1.jpg" alt="" />
+                <img class="pic" :src="contacts[activeContact].avatar" alt="" />
                 <div class="info-user">
-                  <div class="nome">Michele</div>
+                  <div class="nome">{{contacts[activeContact].name}}</div>
                   <div class="ultimo-mess">Ultimo messaggio inviato</div>
                 </div>
                 <div class="icone icone-destra">
@@ -81,10 +82,21 @@
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
               </div>
-              <div class="messaggi">
-                <div class="messaggio-mio"></div>
-                <div class="messaggio-altro"></div>
+              <div
+                class="messaggi"
+                v-for="message in contacts[activeContact].messages"
+              >
+                <div class="messaggio-mio" v-if="message.status === 'sent'">
+                  {{ message.message }}
+                </div>
+                <div
+                  class="messaggio-altro"
+                  v-else-if="message.status === 'received'"
+                >
+                  {{ message.message }}
+                </div>
               </div>
+
               <div class="send-message">
                 <i class="fa-regular fa-face-smile ic"></i>
                 <input
