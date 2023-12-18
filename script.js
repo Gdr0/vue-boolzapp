@@ -184,6 +184,7 @@ createApp({
     contactNu(index) {
       this.activeContact = index;
     },
+
     addMessage() {
       this.contacts[this.activeContact].messages.push({
         message: this.message,
