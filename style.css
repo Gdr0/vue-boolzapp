@@ -74,7 +74,7 @@
 .notifiche {
   display: flex;
   padding: 20px 0;
-  background-color: aquamarine;
+  background-color: rgba(142, 218, 252, 255);
 }
 
 .attiva {
@@ -94,7 +94,7 @@
 }
 .fa-bell-slash {
   font-size: 20px;
-  color: lightgrey;
+  color: rgba(142, 218, 252, 255);
 }
 .mex {
   margin-left: 10px;
@@ -187,7 +187,7 @@ a {
   background-color: pink;
 }
 .messaggio-mio {
-  background-color: lightgreen;
+  background-color: #d5f9ba;
   margin: 20px 30px;
   padding: 10px;
   width: 200px;
@@ -242,4 +242,8 @@ a {
 .new-text {
   flex-grow: 1;
   padding: 10px;
+}
+.fa-microphone,
+.fa-face-smile {
+  color: rgba(109, 116, 117, 255);
 }

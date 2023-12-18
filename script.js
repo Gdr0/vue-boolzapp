@@ -7,6 +7,7 @@ createApp({
       myMessage: [],
       yourMessage: [],
       message: "",
+      searchText: "",
       contacts: [
         {
           name: "Michele",
@@ -171,6 +172,13 @@ createApp({
         },
       ],
     };
+  },
+  computed: {
+    searchContacts() {
+      return this.contacts.filter((contact) =>
+        contact.name.toLowerCase().includes(this.searchText.toLowerCase())
+      );
+    },
   },
   methods: {
     contactNu(index) {

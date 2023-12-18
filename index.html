@@ -46,6 +46,7 @@
           <div class="searchbar">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input
+              v-model="searchText"
               class="search"
               type="text"
               placeholder="Cerca o inserici nuova chat"
@@ -55,7 +56,7 @@
           <div class="chat-avviate">
             <div
               class="profilo-chat"
-              v-for="(contact, index) in contacts"
+              v-for="(contact, index) in searchContacts"
               :key="index"
               @click="contactNu(index)"
             >
