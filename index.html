@@ -84,10 +84,17 @@
               </div>
               <div
                 class="messaggi"
-                v-for="message in contacts[activeContact].messages"
+                v-for="(message,index) in contacts[activeContact].messages"
+                :key="index"
               >
                 <div class="messaggio-mio" v-if="message.status === 'sent'">
                   {{ message.message }}
+                  <div class="dropdown">
+                    <div class="dropdown-content">
+                      <a href="#">Message info</a>
+                      <a href="#" @click="delMessage(index)">Delete messagge</a>
+                    </div>
+                  </div>
                 </div>
                 <div
                   class="messaggio-altro"
@@ -103,6 +110,8 @@
                   type="text"
                   class="new-text"
                   placeholder="Scrivi un messaggio"
+                  v-model="message"
+                  @keydown.enter="addMessage"
                 />
                 <i class="fa-solid fa-microphone icone"></i>
               </div>

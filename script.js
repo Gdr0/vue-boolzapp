@@ -6,6 +6,7 @@ createApp({
       activeContact: 0,
       myMessage: [],
       yourMessage: [],
+      message: "",
       contacts: [
         {
           name: "Michele",
@@ -174,6 +175,21 @@ createApp({
   methods: {
     contactNu(index) {
       this.activeContact = index;
+    },
+    addMessage() {
+      this.contacts[this.activeContact].messages.push({
+        message: this.message,
+        status: "sent",
+      });
+      this.message = "";
+    },
+    sendMessage(event) {
+      if (event.key === "Enter") {
+        this.addMessage();
+      }
+    },
+    delMessage(index) {
+      this.contacts[this.activeContact].messages.splice(index, 1);
     },
   },
 }).mount("#app");
