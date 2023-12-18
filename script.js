@@ -182,6 +182,12 @@ createApp({
         status: "sent",
       });
       this.message = "";
+      setTimeout(() => {
+        this.contacts[this.activeContact].messages.push({
+          message: "ok",
+          status: "received",
+        });
+      }, 1000);
     },
     sendMessage(event) {
       if (event.key === "Enter") {
